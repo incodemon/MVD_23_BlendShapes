@@ -260,8 +260,15 @@ int Geometry::addBlendShape(std::vector<float>& blend_offsets) {
     
     //attribute location is 2 (positions(0) + normals(1) + uvs(2)) + num_blend_shapes
     GLuint new_attrib_location = 2 + num_blend_shapes;
-    
+    GLuint vbo;
+
 //...
+    glGenBuffers(1, &vbo);
+    glBindBuffer(GL_ARRAY_BUFFER,vbo);
+    glBufferData(GL_ARRAY_BUFFER,blend_offsets.size()*sizeof(float),&(blend_offsets[0]),GL_STATIC_DRAW);
+
+
+
     
     return 1;
 }

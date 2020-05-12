@@ -1,0 +1,7 @@
+﻿  tinyxml2.cpp
+LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+Game.obj : error LNK2019: símbolo externo "public: void __cdecl AnimationSystem::init(void)" (?init@AnimationSystem@@QEAAXXZ) sin resolver al que se hace referencia en la función "public: void __cdecl Game::init(int,int)" (?init@Game@@QEAAXHH@Z)
+Game.obj : error LNK2019: símbolo externo "public: void __cdecl AnimationSystem::lateInit(void)" (?lateInit@AnimationSystem@@QEAAXXZ) sin resolver al que se hace referencia en la función "public: void __cdecl Game::init(int,int)" (?init@Game@@QEAAXHH@Z)
+Game.obj : error LNK2019: símbolo externo "public: void __cdecl AnimationSystem::update(float)" (?update@AnimationSystem@@QEAAXM@Z) sin resolver al que se hace referencia en la función "public: void __cdecl Game::update(float)" (?update@Game@@QEAAXM@Z)
+main.obj : error LNK2019: símbolo externo "public: __cdecl AnimationSystem::~AnimationSystem(void)" (??1AnimationSystem@@QEAA@XZ) sin resolver al que se hace referencia en la función "public: __cdecl Game::~Game(void)" (??1Game@@QEAA@XZ)
+..\23-BlendShapes.exe : fatal error LNK1120: 4 externos sin resolver

@@ -262,6 +262,15 @@ struct SkinnedMesh : public Mesh {
             getAllJoints(c, all_joints);
     }
 };
+struct BlendShapes : public Component {
+    std::vector<std::string> blend_names;
+    std::vector<float> blend_weights;
+
+    void addShape(std::string name) {
+        blend_names.push_back(name);
+        blend_weights.push_back(0.0);
+    }
+};
 
 /**** COMPONENT STORAGE ****/
 

@@ -3,6 +3,9 @@
 layout(location = 0) in vec3 a_vertex;
 layout(location = 1) in vec2 a_uv;
 layout(location = 2) in vec3 a_normal;
+layout(location = 3) in vec3 a_blend0;
+layout(location = 4) in vec3 a_blend1;
+
 
 uniform mat4 u_mvp;
 uniform mat4 u_model;

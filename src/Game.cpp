@@ -47,10 +47,17 @@ void Game::init(int w, int h) {
     
     
     
-    
-    //add blend shapes here
-    
+	std::vector<float> vertices, normals, uvs;
+	std::vector<unsigned int> indices;
 
+	Parsers::parseOBJ("data/assets/toon/toon_happy.obj",vertices, uvs,normals,indices);
+	toon_geom.addBlendShape(vertices);
+
+    //add blend shapes here
+	Parsers::parseOBJ("data/assets/toon/toon_angry.obj", vertices, uvs, normals, indices);
+	toon_geom.addBlendShape(vertices);
+
+	BlendShapes& toon_shapes_comp = ECS.createComponentForEntity<BlendShapes>(toon_ent);
     //create default directional light
     ECS.createComponentForEntity<Light>(ECS.createEntity("Directional Light"));
 
